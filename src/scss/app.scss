@@ -15,23 +15,35 @@ body {
 }
 .main-content {
     @extend col-sm-6;
+    @extend col-xs-12;
     background-size: cover;
     height: 800px;
     z-index: 1;
     transition: .4s all ease-in-out;
-    &.urban {
-        background: url('/images/urban-background.png');
-        background-position: center;
-        &:hover{
-            box-shadow: -60px 0 90px rgba(0,0,0,.5);
-            background-position: center;
+
+    &.space {
+        background: -webkit-linear-gradient(right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%), url('/images/space-background.png');
+        background: -o-linear-gradient(right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%), url('/images/space-background.png');
+        background: linear-gradient(to left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%), url('/images/space-background.png'); /* Chrome10-25,Safari5.1-6 */
+
+        &:hover {
+            background: -webkit-linear-gradient(left, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%), url('/images/space-background.png');
+            background: -o-linear-gradient(left, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%), url('/images/space-background.png');
+            background: linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%), url('/images/space-background.png');
         }
     }
-    &.space {
-        background: url('/images/space-background.png');
+    &.urban {
+        background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%), url('/images/urban-background.png');
+        background: -o-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%), url('/images/urban-background.png');
+        background: linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%), url('/images/urban-background.png'); /* Chrome10-25,Safari5.1-6 */
+
+        &:hover {
+            background: -webkit-linear-gradient(left, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%), url('/images/urban-background.png');
+            background: -o-linear-gradient(left, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%), url('/images/urban-background.png');
+            background: linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%), url('/images/urban-background.png');
+        }
     }
     &:hover {
-        box-shadow: 60px 0 90px rgba(0,0,0,.5);
         z-index: 999;
 
     }
